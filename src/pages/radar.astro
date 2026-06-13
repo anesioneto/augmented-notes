@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { newsSources } from "../data/newsSources";
+import { radarItems } from "../data/radarItems";
+---
+
+<BaseLayout title="Radar XR">
+  <section class="page-section hero">
+    <p class="eyebrow">Radar XR</p>
+    <h1>Uma curadoria para acompanhar o ecossistema imersivo.</h1>
+    <p class="lead">
+      Esta seccao vai reunir links recentes de fontes selecionadas. No inicio,
+      funciona como mapa editorial; depois pode ser atualizada automaticamente.
+    </p>
+  </section>
+
+  <section class="section-band">
+    <div class="page-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Links recentes</p>
+          <h2>Ultimas referencias</h2>
+        </div>
+      </div>
+      {
+        radarItems.map((item) => (
+          <a class="news-row" href={item.url}>
+            <span class="post-meta">{item.date}</span>
+            <span>
+              <strong>{item.title}</strong>
+              <br />
+              <span class="small">{item.source} · {item.summary}</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="page-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Fontes</p>
+          <h2>Primeira lista de sites</h2>
+        </div>
+      </div>
+      <div class="source-grid">
+        {
+          newsSources.map((source) => (
+            <a class="source-item" href={source.url}>
+              <strong>{source.name}</strong>
+              <span class="small">{source.category}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

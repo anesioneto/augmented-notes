@@ -1,0 +1,17 @@
+export const newsSources = [
+  { name: "9to5Mac", category: "Tecnologia geral", url: "https://9to5mac.com/" },
+  { name: "Auganix", category: "XR especializada", url: "https://www.auganix.org/" },
+  { name: "MIXED", category: "XR especializada", url: "https://mixed-news.com/" },
+  { name: "AR Insider", category: "Mercado e insights", url: "https://arinsider.co/" },
+  { name: "UploadVR", category: "XR especializada", url: "https://www.uploadvr.com/" },
+  { name: "Road to VR", category: "XR especializada", url: "https://www.roadtovr.com/" },
+  { name: "WIRED Virtual Reality", category: "Tecnologia geral", url: "https://www.wired.com/tag/virtual-reality/" },
+  { name: "Engadget VR", category: "Tecnologia geral", url: "https://www.engadget.com/tag/vr/" },
+  { name: "TechCrunch", category: "Tecnologia geral", url: "https://techcrunch.com/" },
+  { name: "VentureBeat AR/VR", category: "Mercado e insights", url: "https://venturebeat.com/tag/ar-vr/" },
+  { name: "AREA", category: "Industria", url: "https://thearea.org/" },
+  { name: "Crunchbase News", category: "Mercado e empresas", url: "https://news.crunchbase.com/" },
+  { name: "VRScout", category: "XR especializada", url: "https://vrscout.com/" },
+  { name: "XReality", category: "XR especializada", url: "https://xreality.zone/" },
+  { name: "XR Valley", category: "Ecossistema", url: "https://xrvalley.io/" },
+];

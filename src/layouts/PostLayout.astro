@@ -1,0 +1,30 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { title, description, date, category, tags } = Astro.props.frontmatter;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="page-section article">
+    <p class="eyebrow">{category}</p>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <p class="post-meta">
+      {new Date(date).toLocaleDateString("pt-PT", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })}
+    </p>
+    {
+      tags?.length ? (
+        <ul class="tag-list">
+          {tags.map((tag: string) => <li>{tag}</li>)}
+        </ul>
+      ) : null
+    }
+    <div class="article-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

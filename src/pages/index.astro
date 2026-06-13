@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { radarItems } from "../data/radarItems";
+
+const posts = (await getCollection("posts"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const postPath = (id: string) => id.replace(/\.mdx?$/, "");
+---
+
+<BaseLayout>
+  <section class="page-section hero">
+    <p class="eyebrow">AR · VR · MR · XR</p>
+    <h1>Notas para entender o presente imersivo.</h1>
+    <p class="lead">
+      Guias, referencias e curadoria sobre tecnologias imersivas, desde os
+      conceitos fundamentais ate aos equipamentos, acessorios e casos de uso.
+    </p>
+    <div class="hero-actions">
+      <a class="button" href="/fundamentos/">Explorar fundamentos</a>
+      <a class="button secondary" href="/radar/">Ver Radar XR</a>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="page-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Mapa inicial</p>
+          <h2>Uma referencia viva sobre XR</h2>
+        </div>
+        <p>
+          O site combina conteudo duradouro com uma camada de novidades para
+          acompanhar a evolucao do ecossistema.
+        </p>
+      </div>
+      <div class="grid">
+        <a class="card" href="/fundamentos/">
+          <h3>Fundamentos XR</h3>
+          <p>Conceitos essenciais sobre AR, VR, MR, spatial computing, tracking e presenca.</p>
+        </a>
+        <a class="card" href="/equipamentos/">
+          <h3>Equipamentos e acessorios</h3>
+          <p>Headsets, controladores, haptics, sensores, displays e plataformas.</p>
+        </a>
+        <a class="card" href="/casos-de-uso/">
+          <h3>Casos de uso</h3>
+          <p>Aplicacoes em educacao, saude, industria, cultura, retalho e colaboracao.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="page-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Artigos</p>
+          <h2>Primeiras notas</h2>
+        </div>
+        <a href="/blog/">Ver todos</a>
+      </div>
+      <div class="post-list">
+        {
+          posts.map((post) => (
+            <a class="post-row" href={`/blog/${postPath(post.id)}/`}>
+              <span class="post-meta">{post.data.category}</span>
+              <span>
+                <strong>{post.data.title}</strong>
+                <br />
+                <span class="small">{post.data.description}</span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="page-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Radar XR</p>
+          <h2>Novidades e referencias</h2>
+        </div>
+        <a href="/radar/">Abrir radar</a>
+      </div>
+      {
+        radarItems.map((item) => (
+          <a class="news-row" href={item.url}>
+            <span class="post-meta">{item.source}</span>
+            <span>
+              <strong>{item.title}</strong>
+              <br />
+              <span class="small">{item.summary}</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
