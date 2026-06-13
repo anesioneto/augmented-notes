@@ -2,15 +2,15 @@ export const site = {
   name: "Augmented Notes",
   domain: "augmentednot.es",
   description:
-    "Notas, guias e referencias sobre AR, VR, MR e o ecossistema XR.",
+    "Notes, guides, and references on AR, VR, MR, and the wider XR ecosystem.",
   author: "Anesio Neto",
   linkedin: "https://www.linkedin.com/in/anesioneto/",
 };
 
 export const navigation = [
-  { href: "/", label: "Inicio" },
-  { href: "/fundamentos/", label: "Fundamentos" },
-  { href: "/equipamentos/", label: "Equipamentos" },
-  { href: "/casos-de-uso/", label: "Casos de uso" },
+  { href: "/", label: "Home" },
+  { href: "/fundamentals/", label: "Fundamentals" },
+  { href: "/gear/", label: "Gear" },
+  { href: "/use-cases/", label: "Use cases" },
   { href: "/radar/", label: "Radar XR" },
 ];

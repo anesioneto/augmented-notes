@@ -10,7 +10,7 @@ const { title, description, date, category, tags } = Astro.props.frontmatter;
     <h1>{title}</h1>
     <p class="lead">{description}</p>
     <p class="post-meta">
-      {new Date(date).toLocaleDateString("pt-PT", {
+      {new Date(date).toLocaleDateString("en-US", {
         day: "2-digit",
         month: "long",
         year: "numeric",

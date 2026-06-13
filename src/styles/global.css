@@ -1,16 +1,17 @@
 :root {
   color-scheme: light;
-  --bg: #f7f3e8;
-  --surface: #fffaf0;
-  --ink: #12161a;
-  --muted: #586168;
-  --line: #d9d0bf;
-  --accent: #008c7f;
-  --accent-strong: #0b5f57;
-  --mark: #f0c84b;
-  --dark: #101418;
+  --bg: #f6f8f5;
+  --surface: #ffffff;
+  --ink: #111416;
+  --muted: #5f686e;
+  --line: #d7dfdc;
+  --accent: #00a99d;
+  --accent-strong: #06736d;
+  --mark: #ffd166;
+  --warm: #ff6b4a;
+  --dark: #111416;
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
 
@@ -65,6 +66,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   font-weight: 800;
+  font-family: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   letter-spacing: 0;
   text-decoration: none;
 }
@@ -108,6 +110,7 @@ a:hover {
 h1,
 h2,
 h3 {
+  font-family: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   margin: 0;
   line-height: 1.12;
 }

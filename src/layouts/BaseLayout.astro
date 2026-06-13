@@ -12,11 +12,17 @@ const pageTitle = title ? `${title} | ${site.name}` : site.name;
 ---
 
 <!doctype html>
-<html lang="pt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="/favicon.svg" />
     <title>{pageTitle}</title>
   </head>
@@ -28,7 +34,7 @@ const pageTitle = title ? `${title} | ${site.name}` : site.name;
             <span class="brand-mark">AN</span>
             <span>{site.name}</span>
           </a>
-          <nav class="nav" aria-label="Principal">
+          <nav class="nav" aria-label="Primary">
             {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
           </nav>
         </div>
@@ -38,8 +44,8 @@ const pageTitle = title ? `${title} | ${site.name}` : site.name;
       </main>
       <footer class="site-footer">
         <div class="footer-inner">
-          <span>{site.name} · {site.domain}</span>
-          <a href="/sobre/">Nota do autor</a>
+          <span>{site.name} - {site.domain}</span>
+          <a href="/about/">About the author</a>
         </div>
       </footer>
     </div>

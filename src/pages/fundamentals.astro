@@ -3,19 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("posts"))
-  .filter((post) => post.data.category === "Fundamentos" && !post.data.draft)
+  .filter((post) => post.data.category === "Fundamentals" && !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const postPath = (id: string) => id.replace(/\.mdx?$/, "");
 ---
 
-<BaseLayout title="Fundamentos XR">
+<BaseLayout title="XR Fundamentals">
   <section class="page-section hero">
-    <p class="eyebrow">Fundamentos</p>
-    <h1>O vocabulário essencial das tecnologias imersivas.</h1>
+    <p class="eyebrow">Fundamentals</p>
+    <h1>The essential vocabulary of immersive technologies.</h1>
     <p class="lead">
-      Explicacoes claras sobre AR, VR, MR, XR, presenca, interacao, tracking,
-      passthrough, spatial computing e outros conceitos base.
+      Clear explanations of AR, VR, MR, XR, presence, interaction, tracking,
+      passthrough, spatial computing, and other core concepts.
     </p>
   </section>
   <section class="section-band">

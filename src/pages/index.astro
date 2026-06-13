@@ -13,15 +13,15 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
 
 <BaseLayout>
   <section class="page-section hero">
-    <p class="eyebrow">AR · VR · MR · XR</p>
-    <h1>Notas para entender o presente imersivo.</h1>
+    <p class="eyebrow">AR / VR / MR / XR</p>
+    <h1>Notes for understanding the immersive present.</h1>
     <p class="lead">
-      Guias, referencias e curadoria sobre tecnologias imersivas, desde os
-      conceitos fundamentais ate aos equipamentos, acessorios e casos de uso.
+      Guides, references, and curated signals on immersive technologies, from
+      core concepts to devices, accessories, and real-world use cases.
     </p>
     <div class="hero-actions">
-      <a class="button" href="/fundamentos/">Explorar fundamentos</a>
-      <a class="button secondary" href="/radar/">Ver Radar XR</a>
+      <a class="button" href="/fundamentals/">Explore fundamentals</a>
+      <a class="button secondary" href="/radar/">Open Radar XR</a>
     </div>
   </section>
 
@@ -29,26 +29,26 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
     <div class="page-section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Mapa inicial</p>
-          <h2>Uma referencia viva sobre XR</h2>
+          <p class="eyebrow">Site map</p>
+          <h2>A living reference for XR</h2>
         </div>
         <p>
-          O site combina conteudo duradouro com uma camada de novidades para
-          acompanhar a evolucao do ecossistema.
+          The site combines evergreen explanations with a faster news layer for
+          following the ecosystem as it evolves.
         </p>
       </div>
       <div class="grid">
-        <a class="card" href="/fundamentos/">
-          <h3>Fundamentos XR</h3>
-          <p>Conceitos essenciais sobre AR, VR, MR, spatial computing, tracking e presenca.</p>
+        <a class="card" href="/fundamentals/">
+          <h3>XR fundamentals</h3>
+          <p>Essential concepts around AR, VR, MR, spatial computing, tracking, and presence.</p>
         </a>
-        <a class="card" href="/equipamentos/">
-          <h3>Equipamentos e acessorios</h3>
-          <p>Headsets, controladores, haptics, sensores, displays e plataformas.</p>
+        <a class="card" href="/gear/">
+          <h3>Gear and accessories</h3>
+          <p>Headsets, controllers, haptics, sensors, displays, and platforms.</p>
         </a>
-        <a class="card" href="/casos-de-uso/">
-          <h3>Casos de uso</h3>
-          <p>Aplicacoes em educacao, saude, industria, cultura, retalho e colaboracao.</p>
+        <a class="card" href="/use-cases/">
+          <h3>Use cases</h3>
+          <p>Applications in education, healthcare, industry, culture, retail, and collaboration.</p>
         </a>
       </div>
     </div>
@@ -58,10 +58,10 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
     <div class="page-section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Artigos</p>
-          <h2>Primeiras notas</h2>
+          <p class="eyebrow">Articles</p>
+          <h2>First notes</h2>
         </div>
-        <a href="/blog/">Ver todos</a>
+        <a href="/blog/">View all</a>
       </div>
       <div class="post-list">
         {
@@ -85,9 +85,9 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
       <div class="section-heading">
         <div>
           <p class="eyebrow">Radar XR</p>
-          <h2>Novidades e referencias</h2>
+          <h2>News and references</h2>
         </div>
-        <a href="/radar/">Abrir radar</a>
+        <a href="/radar/">Open radar</a>
       </div>
       {
         radarItems.map((item) => (
