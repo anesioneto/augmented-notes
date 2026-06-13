@@ -1,11 +1,11 @@
 export const radarItems = [
   {
-    title: "Sample Radar XR item",
+    title: "XR Radar is being prepared",
     source: "Augmented Notes",
     date: "2026-06-13",
     category: "XR Radar",
-    url: "/radar/",
+    url: "/coming-soon/",
     summary:
-      "This space will be fed by recent links from selected sources on AR, VR, MR, and XR.",
+      "This space will be fed by selected links about AR, VR, MR, haptics, devices, and immersive use cases.",
   },
 ];

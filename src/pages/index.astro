@@ -1,14 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
 import { radarItems } from "../data/radarItems";
-
-const posts = (await getCollection("posts"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
-
-const postPath = (id: string) => id.replace(/\.mdx?$/, "");
 ---
 
 <BaseLayout>
@@ -30,17 +22,17 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
       <div class="section-heading">
         <div>
           <p class="eyebrow">Site map</p>
-          <h2>A living reference for XR</h2>
+          <h2>A calm reference for XR</h2>
         </div>
         <p>
-          The site combines evergreen explanations with a faster news layer for
-          following the ecosystem as it evolves.
+          The site is being shaped as a living knowledge base: evergreen
+          concepts, practical references, and a curated news layer.
         </p>
       </div>
       <div class="grid">
         <a class="card" href="/fundamentals/">
           <h3>XR fundamentals</h3>
-          <p>Essential concepts around AR, VR, MR, spatial computing, tracking, and presence.</p>
+          <p>Core concepts around AR, VR, MR, spatial computing, tracking, and presence.</p>
         </a>
         <a class="card" href="/gear/">
           <h3>Gear and accessories</h3>
@@ -61,21 +53,25 @@ const postPath = (id: string) => id.replace(/\.mdx?$/, "");
           <p class="eyebrow">Articles</p>
           <h2>First notes</h2>
         </div>
-        <a href="/blog/">View all</a>
+        <a href="/coming-soon/">View all</a>
       </div>
       <div class="post-list">
-        {
-          posts.map((post) => (
-            <a class="post-row" href={`/blog/${postPath(post.id)}/`}>
-              <span class="post-meta">{post.data.category}</span>
-              <span>
-                <strong>{post.data.title}</strong>
-                <br />
-                <span class="small">{post.data.description}</span>
-              </span>
-            </a>
-          ))
-        }
+        <a class="post-row" href="/coming-soon/">
+          <span class="post-meta">Fundamentals</span>
+          <span>
+            <strong>What is XR?</strong>
+            <br />
+            <span class="small">A first guide to AR, VR, MR, and the wider immersive spectrum.</span>
+          </span>
+        </a>
+        <a class="post-row" href="/coming-soon/">
+          <span class="post-meta">Gear</span>
+          <span>
+            <strong>Why haptics matters</strong>
+            <br />
+            <span class="small">Tactile feedback, presence, and the physical side of immersive interfaces.</span>
+          </span>
+        </a>
       </div>
     </div>
   </section>

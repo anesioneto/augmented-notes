@@ -1,39 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { newsSources } from "../data/newsSources";
-import { radarItems } from "../data/radarItems";
 ---
 
 <BaseLayout title="Radar XR">
   <section class="page-section hero">
     <p class="eyebrow">Radar XR</p>
-    <h1>A curated signal for following the immersive ecosystem.</h1>
+    <h1>The XR news radar is being prepared.</h1>
     <p class="lead">
-      This section will gather recent links from selected sources. At first it
-      works as an editorial map; later it can be updated automatically.
+      This section will gather recent links from selected XR sources. The first
+      version will work as a curated index before the automated RSS layer is
+      added. Please return soon.
     </p>
-  </section>
-
-  <section class="section-band">
-    <div class="page-section">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Recent links</p>
-          <h2>Latest references</h2>
-        </div>
-      </div>
-      {
-        radarItems.map((item) => (
-          <a class="news-row" href={item.url}>
-            <span class="post-meta">{item.date}</span>
-            <span>
-              <strong>{item.title}</strong>
-              <br />
-              <span class="small">{item.source} - {item.summary}</span>
-            </span>
-          </a>
-        ))
-      }
+    <div class="hero-actions">
+      <a class="button" href="/">Back to home</a>
+      <a class="button secondary" href="/coming-soon/">Content status</a>
     </div>
   </section>
 
@@ -48,7 +29,7 @@ import { radarItems } from "../data/radarItems";
       <div class="source-grid">
         {
           newsSources.map((source) => (
-            <a class="source-item" href={source.url}>
+            <a class="source-item" href="/coming-soon/">
               <strong>{source.name}</strong>
               <span class="small">{source.category}</span>
             </a>

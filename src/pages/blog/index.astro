@@ -1,36 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("posts"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const postPath = (id: string) => id.replace(/\.mdx?$/, "");
 ---
 
-<BaseLayout title="Blog" description="Augmented Notes articles">
+<BaseLayout title="Articles" description="Augmented Notes articles">
   <section class="page-section hero">
-    <p class="eyebrow">Blog</p>
-    <h1>Published notes</h1>
+    <p class="eyebrow">Articles</p>
+    <h1>The article library is in development.</h1>
     <p class="lead">
-      Articles and guides for building a progressive understanding of the XR universe.
+      The first guides and field notes are being structured. Soon this page will
+      gather fundamentals, gear notes, use cases, and editorial reflections.
     </p>
-  </section>
-  <section class="section-band">
-    <div class="page-section post-list">
-      {
-        posts.map((post) => (
-          <a class="post-row" href={`/blog/${postPath(post.id)}/`}>
-            <span class="post-meta">{post.data.category}</span>
-            <span>
-              <strong>{post.data.title}</strong>
-              <br />
-              <span class="small">{post.data.description}</span>
-            </span>
-          </a>
-        ))
-      }
+    <div class="hero-actions">
+      <a class="button" href="/">Back to home</a>
+      <a class="button secondary" href="/coming-soon/">Content status</a>
     </div>
   </section>
 </BaseLayout>
